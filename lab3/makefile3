@@ -1,0 +1,11 @@
+all:edit 
+
+edit : line_parser.o task3.o
+		gcc -g -Wall -o edit line_parser.o task3.o 
+
+line_parser.o : line_parser.c 
+	gcc -g -Wall -c -o line_parser.o line_parser.c 
+task3.o : task3.c
+	gcc -g -Wall -c -o task3.o task3.c
+clean :
+	rm edit line_parser.o task3.o
